@@ -7,6 +7,11 @@
     <title>createview</title>
 </head>
 <body>
-    <h1>hey you successfully render the created view</h1>
+    <h2>hey you successfully render the created view</h2>
+    {% csrf_token %}
+    <form action="" method="post"novalidate>
+        {{form.as_p}}
+        <button type="submit">submit</button>
+    </form>
 </body>
 </html>
