@@ -9,10 +9,12 @@
 <body>
     <h2>hey you successfully render the created view</h2>
     {% comment %} {% csrf_token %} {% endcomment %}
+
     <form action="" method="post"novalidate>
         {% csrf_token %}
         {{form.as_p}}
         <button type="submit">submit</button>
     </form>
+    {% comment %} this is give rise to inproperly configured error because after saving data djano dont know where to go  {% endcomment %}
 </body>
 </html>
