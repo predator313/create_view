@@ -8,8 +8,9 @@
 </head>
 <body>
     <h2>hey you successfully render the created view</h2>
-    {% csrf_token %}
+    {% comment %} {% csrf_token %} {% endcomment %}
     <form action="" method="post"novalidate>
+        {% csrf_token %}
         {{form.as_p}}
         <button type="submit">submit</button>
     </form>
