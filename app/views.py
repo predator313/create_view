@@ -5,5 +5,5 @@ from .models import Student
 class CreateStudent(CreateView):
     model=Student
     template_name='app/home.html'
-    # label={'email':'emailadd'}
     fields=['name','email','password']
+    success_url='/'
